@@ -1,0 +1,4 @@
+inline y block
+inline ocupa lo del contenido y block horizontalmente 
+inlin-block 
+es un hibrido
