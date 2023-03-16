@@ -1,0 +1,42 @@
+h1{
+    color: blueviolet;
+    font-size: large;
+    background-color: black;
+}
+
+p{
+    background-color: yellow;
+}
+
+header{
+    background-color: brown;
+    font-size: 30px;
+}
+
+body{
+    background-color: aqua;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.colorFondoH1{
+    background-color: chartreuse;
+}/* selector de clase es mas importante  */
+
+#selectorID{
+    background-color: black;
+} /* selector de id, se aplica el atributo id, no es mas importante sino que depende de como estan los elementos
+dentro de otro*/
+/* no deberia tener 2 etiquetas con el mismo ID, es la etiqueta con mayor especificidad */
+
+
+/* por especificidad aplica el mas alto si se repite la caracteristica como el backgraound */
+
+.fuenteStandar{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    font-weight: lighter;
+    font-style: oblique;
+}

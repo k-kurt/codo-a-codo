@@ -1,0 +1,10 @@
+https://dev.to/sapardo/etiquetas-semanticas-de-html5-3j7m
+https://favicon.io/
+https://tablericons.com/
+https://app.netlify.com/
+
+
+las etiquetas nos ayuda a tener un default y despues personalizar con las clases o id
+h1,h2,h3,h4{
+    background-color: blue;
+}
