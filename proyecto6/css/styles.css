@@ -1,0 +1,31 @@
+body{
+font-family: 'Open Sans', sans-serif;
+background-color: rgb(221, 203, 6);
+
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+}
+
+.color-standard-fondo{
+    background-color: #03FDFD ;
+}
+
+.color-secundario-fondo{
+    background-color: rgb(122, 0, 0);
+    background-color: rgba(red, green, blue, alpha);/* es la opacidad del color el alpha */
+}
+
+.color-fuente-principal{
+    color: hsl(230, 100%, 50%);
+}
+
+.tamanio-icono{
+    font-size: 150px;
+    
+}
+
+.fondo-header{
+    
+}
