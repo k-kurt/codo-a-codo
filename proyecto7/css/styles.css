@@ -1,0 +1,26 @@
+main section{
+    /* tiene que estar separado por un espacio y se refiere en este caso a la section que esta adentro de main */
+}
+
+main .parrafo{
+    /* selecciona al que tenga la calse parrafo */
+}
+
+.clase1 .parrafo{
+    font-size: 50px;
+}
+/* nos permite especificar a quien queremos aplicar los cambios sin tener que andar creando varias clases por separado */
+
+main h2{
+    padding: 20px 50px 0px 0px;
+    /* cuando agregamos  4 valores es los valores de los 4 lados en sentido horario empezando desde arriba */
+    padding: 20px 15px;/* 20 arria y abajo y 15 a los costado */
+    margin: 0 auto;/* para centrar generalmente */
+    border: 10px solid coral;
+    border-top: 10px;
+    
+}
+
+body{
+    background-color: rgb(44, 117, 72);
+}
