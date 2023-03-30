@@ -1,0 +1,13 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+.seccion{
+    /* height: 400px;
+    width: 400px; */
+    height: 50%;
+    width: 50%;
+    background-color: brown;
+    color: aliceblue;
+}
