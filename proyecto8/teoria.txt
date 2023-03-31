@@ -19,3 +19,6 @@ https://developer.mozilla.org/es/docs/Web/CSS/background-image      mdn web docs
 
 
 pase lo que pase con la ventana si usamos px va a quedar de gual manera por que relativo 
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/position
