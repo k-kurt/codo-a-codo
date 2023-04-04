@@ -1,0 +1,35 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+.seccion{
+    /* height: 400px;
+    width: 400px; */
+    height: 50%;
+    width: 50%;
+    background-color: brown;
+    color: aliceblue;
+    /* transition va en el principal */
+    transition: all 5s;
+
+    background-image: url(..img/cualquiera.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.seccion:hover{
+   /*  height: 300px;
+    width: 35%; */
+    /* transform: rotate(50deg); */
+   /*  transform: scale(120%);
+    border-radius: 50%; */
+    /* seudoclase, deberia estar debajo de su predecesor */
+    /* background-color: aqua; */
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+    
+
+}
