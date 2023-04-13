@@ -1,0 +1,22 @@
+
+
+
+
+@media screen and(max-width:720px) {
+    .elemento-1{
+        background-color: blue;
+    }
+    
+}
+
+@media screen and(max-width:371px) {
+    .container{
+        flex-direction: column;/* en resoluciones peuqeñas se ven en columna */
+    }
+    .elemento-1{
+        font-size: 2rem;
+    }
+    .elemento-3{
+        font-size: 5rem;
+    }
+}
