@@ -85,3 +85,14 @@ Ej:
 
 antes estaban en display: flex; que ponia en horizontal los elementos, con el media Query con dispositivos moviles menor a 375px los
 elementos se ponen en posicion vertical
+
+
+--------------------------------------------------clase 11----------------------------------------------
+BOOSRAP
+    https://getbootstrap.com/
+
+
+--------------------------------------------------clase 12----------------------------------------------
+GitHub
+
+https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
