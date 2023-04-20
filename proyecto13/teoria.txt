@@ -1,0 +1,141 @@
+https://dev.to/sapardo/etiquetas-semanticas-de-html5-3j7m
+https://favicon.io/
+https://tablericons.com/
+https://app.netlify.com/
+
+
+las etiquetas nos ayuda a tener un default y despues personalizar con las clases o id
+h1,h2,h3,h4{
+    background-color: blue;
+}
+
+
+
+
+https://fonts.google.com/
+https://fontawesome.com/
+https://htmlcolorcodes.com/es/
+https://developer.mozilla.org/es/docs/Web/CSS/background-image      mdn web docs
+
+
+pase lo que pase con la ventana si usamos px va a quedar de gual manera por que relativo 
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/position
+
+--------------------------------------------------clase 9----------------------------------------------
+la seudoclase es para generar un especie de evento a un elemento
+
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+
+https://developer.mozilla.org/es/docs/Web/CSS/:focus
+
+https://bennettfeely.com/clippy/
+
+https://animate.style
+
+
+--------------------------------------------------clase 10----------------------------------------------
+MEDIA QUERY para WEB RESPONSI
+    formato parecido a las funciones son las media QUERY
+    
+
+DISPLAY
+FLEX
+    la asignamos el flex al contenedor, con solo poner en el contenedor el display: flex; le estamos diciendo que los elementos los queremos horizontales de star al end
+    flex va el star que es por defecto, tambien puede end y center
+
+flex-direction
+    con el column se disponen de manera vertical
+    con el row se dispone uno al lado del otro que es el default
+    con el row-reverse el ultimo se pone al principio en horizontal
+    con el flex-wrap: wrap; agrega una fila cuando no entra mas elementos
+    con el flex-direction: column-reverse; pone en columna los elementos del ultimo al primero
+    con el Justify-content: center o end o star; star por defecto.
+    con el space around el espacio de los costados es la mitad de entre ellos
+    con el beetween solo hay espacio entre ellos
+    con el evenly es espacio es igual entre ellos y los bordes
+
+gap
+    gap: 1rem; separa los elementos entre ellos pero no del contenedor
+
+
+order
+    ordena el elemento donde querramos que este en comparacion con los demas, contando el 0
+
+
+aling-item
+    alinear verticalmente(acrox y)
+    strech ocupa todo el esapcio disponible
+    center  centro verticalmente
+    flex-end; lo pone al final de todo en la parte inferior halbando verticalmente
+    justify-content: center; aliena tanto vertical como horzaontalmente todo en el centro
+    
+
+
+Media Query
+	si queremos hacer responsive la pagina con el display: flex; y las media Query podemos jugar con eso
+
+Ej: 
+	@media screen and (max-width:375px){
+		.container{
+			flex-direction. column;
+		}
+	}
+
+antes estaban en display: flex; que ponia en horizontal los elementos, con el media Query con dispositivos moviles menor a 375px los
+elementos se ponen en posicion vertical
+
+
+--------------------------------------------------clase 11----------------------------------------------
+BOOSRAP
+    https://getbootstrap.com/
+
+
+--------------------------------------------------clase 12----------------------------------------------
+GitHub
+
+https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+git flow
+    son todas las ramas demotrada graficamente 
+
+git branch
+     para moverse entre ramas
+
+git status
+    nos dice que archivos o directorios fueron modificados
+
+git add css/style.css
+git add .
+    el punto agrega todo o podemos hacerlo pr directorio o archivos, todo se agrega al stash
+
+git commit -m "agregado de archvios style.css. index.html y secundaria.html"
+    para commitiar, guardarlo, empaquetarlo ante de hacer push al remoto
+
+git push origin main
+    el origin nos dice a que repositorio remoto queremos subir y a que rama con el main
+
+
+
+
+
+--------------------------------------------------clase 13----------------------------------------------
+GitHub
+cotinua la clase 
+
+Servidores
+    la comunicacion entre cliente-servidor mediante un protocolo
+    Hay diferente servidores que brindan diefrentes servidores: servidores ftp para arcgivos, de mails, de pagnas. etc
+
+protocolo MSTP
+    para mails personalizados
+
+protocolo https
+    es el que vamos a utilizar, se unifica todo en el modelo cliente-servidor que se utiliza para conectar cualquier
+    tipo de cliente web a un servidor 
+
+
+SCRUM
+    es una metedologia de trabajo, es un metodo agil de trabajar, trabajar en equipo para la mejora continua de efrentar los
+    prblemas
