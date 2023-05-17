@@ -1,0 +1,376 @@
+https://dev.to/sapardo/etiquetas-semanticas-de-html5-3j7m
+https://favicon.io/
+https://tablericons.com/
+https://app.netlify.com/
+
+
+las etiquetas nos ayuda a tener un default y despues personalizar con las clases o id
+h1,h2,h3,h4{
+    background-color: blue;
+}
+
+
+
+
+https://fonts.google.com/
+https://fontawesome.com/
+https://htmlcolorcodes.com/es/
+https://developer.mozilla.org/es/docs/Web/CSS/background-image      mdn web docs
+
+
+pase lo que pase con la ventana si usamos px va a quedar de gual manera por que relativo 
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/position
+
+--------------------------------------------------clase 9----------------------------------------------
+la seudoclase es para generar un especie de evento a un elemento
+
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+
+https://developer.mozilla.org/es/docs/Web/CSS/:focus
+
+https://bennettfeely.com/clippy/
+
+https://animate.style
+
+
+--------------------------------------------------clase 10----------------------------------------------
+MEDIA QUERY para WEB RESPONSI
+    formato parecido a las funciones son las media QUERY
+    
+
+DISPLAY
+FLEX
+    la asignamos el flex al contenedor, con solo poner en el contenedor el display: flex; le estamos diciendo que los elementos los queremos horizontales de star al end
+    flex va el star que es por defecto, tambien puede end y center
+
+flex-direction
+    con el column se disponen de manera vertical
+    con el row se dispone uno al lado del otro que es el default
+    con el row-reverse el ultimo se pone al principio en horizontal
+    con el flex-wrap: wrap; agrega una fila cuando no entra mas elementos
+    con el flex-direction: column-reverse; pone en columna los elementos del ultimo al primero
+    con el Justify-content: center o end o star; star por defecto.
+    con el space around el espacio de los costados es la mitad de entre ellos
+    con el beetween solo hay espacio entre ellos
+    con el evenly es espacio es igual entre ellos y los bordes
+
+gap
+    gap: 1rem; separa los elementos entre ellos pero no del contenedor
+
+
+order
+    ordena el elemento donde querramos que este en comparacion con los demas, contando el 0
+
+
+aling-item
+    alinear verticalmente(acrox y)
+    strech ocupa todo el esapcio disponible
+    center  centro verticalmente
+    flex-end; lo pone al final de todo en la parte inferior halbando verticalmente
+    justify-content: center; aliena tanto vertical como horzaontalmente todo en el centro
+    
+
+
+Media Query
+	si queremos hacer responsive la pagina con el display: flex; y las media Query podemos jugar con eso
+
+Ej: 
+	@media screen and (max-width:375px){
+		.container{
+			flex-direction. column;
+		}
+	}
+
+antes estaban en display: flex; que ponia en horizontal los elementos, con el media Query con dispositivos moviles menor a 375px los
+elementos se ponen en posicion vertical
+
+
+--------------------------------------------------clase 11----------------------------------------------
+BOOSRAP
+    https://getbootstrap.com/
+
+
+--------------------------------------------------clase 12----------------------------------------------
+GitHub
+
+https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+git flow
+    son todas las ramas demotrada graficamente 
+
+git branch
+     para moverse entre ramas
+
+git status
+    nos dice que archivos o directorios fueron modificados
+
+git add css/style.css
+git add .
+    el punto agrega todo o podemos hacerlo pr directorio o archivos, todo se agrega al stash
+
+git commit -m "agregado de archvios style.css. index.html y secundaria.html"
+    para commitiar, guardarlo, empaquetarlo ante de hacer push al remoto
+
+git push origin main
+    el origin nos dice a que repositorio remoto queremos subir y a que rama con el main
+
+
+
+
+
+--------------------------------------------------clase 13----------------------------------------------
+GitHub
+cotinua la clase 
+
+Servidores
+    la comunicacion entre cliente-servidor mediante un protocolo
+    Hay diferente servidores que brindan diefrentes servidores: servidores ftp para arcgivos, de mails, de pagnas. etc
+
+protocolo MSTP
+    para mails personalizados
+
+protocolo https
+    es el que vamos a utilizar, se unifica todo en el modelo cliente-servidor que se utiliza para conectar cualquier
+    tipo de cliente web a un servidor 
+
+
+SCRUM
+    es una metedologia de trabajo, es un metodo agil de trabajar, trabajar en equipo para la mejora continua de efrentar los
+    prblemas
+
+
+
+
+--------------------------------------------------clase 14----------------------------------------------
+JAVASCRIPT
+
+var producto = "audifonos Gamer"; 
+            "=" es igual a " se le asigna a ... "
+            se puede asignar string con comillas simples o dobles en js 
+
+            un numero double e int son iguales en js 
+
+            solo permite guion bajo "_" en el inicio de una variable
+
+            undefined es cuando queremos hacer algun maneje con una variable  y no esta definido 
+            Nan es igual a Not a number es cuando queremos hacer una operacion como pasar un string a numero 
+            y no contiene numero ese sring
+
+
+let 
+            la diferencia con el alcance de la variable, let tiene mas alcance 
+            var es menos global y let mas global
+
+            let te permite declarar variables limitando su alcance (scope) al bloque, declaración, o expresión donde 
+            se está usando. a diferencia de la palabra 
+            clave var la cual define una variable global o local en una función sin importar el ámbito del bloque.
+
+const 
+            la variable declarada con const no puede cambiar su valor despues
+            siempre tiene que tener un tipo de dato declarado, no puede estar vacio
+
+
+
+--------------------------------------------------clase 15----------------------------------------------
+
+OPERADORES CONDICIONAES
+
+    ==
+    !=
+    <
+    >
+    ||
+    &&
+
+
+    OPERACION TERNEARIA 
+
+let max=(num1>num2) ? "el primer numero es el maor"
+: "el segundo es mayor";
+
+es mas simple no se puede varias lineas
+
+--------------------------------------------------clase 16----------------------------------------------
+
+SWITCH
+
+let aux= true;
+switch(aux){
+    case true:
+        console.log("hola");
+        brack;
+    default:
+            console.log("askad");
+            brack;
+}
+
+//CICLOS
+
+let contador=0;
+while(contador <=20){
+        console.log(contador);
+        contador++;
+}
+
+
+do{
+    console.log("hola");
+}while(true);
+
+//FOR 
+
+
+for(let i=0;i>=0;i++){
+    console.log(i);
+}
+
+//VECTOR
+
+    var numbers=[1,2,10,15];
+
+
+
+
+let palabra="hola este es un texto largo, no soy un redactor...";
+console.log(palabra.toUpperCase()); poner en mayuscula todo
+console.log(palabra.replace("teto", "texto aburrido y largo")); reemplazar texto de un string
+
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+donde dice metodo instance en la derecha
+
+
+
+
+--------------------------------------------------clase 17----------------------------------------------
+
+ARRAY
+    
+    const numero=[];        cualquier tipo de array, de datos
+    const numero=[1,3,4,5,6];        array tipo numeros
+    const numero=new Array["enero,"marzo,"febrero"];  
+    let arreglo=["hola",10,true,"si",null,{nombre:"juan",trabajo:"programador"},[1,2,[1,2]]];      es un mejunge de cosas que si se puede
+
+AGREGAR ELEMENTO AL ARRAY
+
+    numero[5]=4;
+
+    numeros.push(70);       agrega al final
+
+    numero.push(80,90,100);
+
+    numeros.unshift(-30,-20,-10);       agrega al principio
+
+
+QUITAR DEL ARRAY
+
+    numeros.ppop();     elmina el ultimo
+
+    numero.shift();     elimina el primero
+
+    numeros.splice(2,1);        puedo eliminar tantos elementos que quisiera de donde quisiera
+                                subindice que inicia, cantidad de elementos que elimina
+
+
+REST OPERATOR O SPREAD OPERATOR
+
+    const meses =["septiembre", "octubre"];
+
+    const nuevoArreglo=new Aray["...meses, "junio","julio","agosto", ...meses2];       entonces concatena arreays 
+
+
+BUCLE FOR
+
+    for(let i=0;i<meses.length;i++){
+        console.log(meses[i]);
+
+    }
+
+
+
+FUNCIONES
+
+    function sumar() {
+        let numero1=5, numero2=10;
+        console.log(numero1+numero2);
+
+    }
+
+    otra forma de declarar una funcion 
+
+EXPRESION DE UNA FUNCION 
+
+    const sumar2= function (){
+        console.log(3+3);
+    }
+
+    sumar2();
+
+    no funciona si llamo a la funcion antes de la inicializacion en cambio la anterior si, esta no por que estamos
+    guardando una funcion en una variable y estas se guardan secuencialmente 
+
+
+PARAMETROS Y ARGUMENTOS
+
+    function sumar3(n1,n2){
+        console.log(n1+n2);
+    }
+
+    sumar3(5,1);
+
+
+
+
+--------------------------------------------------clase 18----------------------------------------------
+
+    USAR RETURN EN LA FUNCION       para poder guardar en una variable donde fue emvocada la funcion
+
+
+function retornaSuma(num1,num2){
+    return num1+num2;
+}
+
+let resultado0retornarSuma(2,3);
+
+let promedio=resultado/2;
+
+console.log("el resultado es: "+promedio);
+
+
+function ,ayorque(num1,num2){
+    if(num1!=num2){
+            cons res=Math.max(num1,num2);
+            eturn"el mayor es: + res;
+    }
+    return "los numeros son iguales";
+}
+
+const resultado2 =mayorque(20,30);
+console.log(resultado);
+
+
+
+
+CALLBACKS--------------------------------------
+
+function mensaje(vooleano){
+    console.log(voolano);
+}
+
+function llamadaFunc(number,pepe){
+    if(number=01){
+        pepe(true);
+    }
+}
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+
+
+--------------------------------------------------clase 19----------------------------------------------
+
