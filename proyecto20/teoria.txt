@@ -173,6 +173,16 @@ const
 
 
 
+ParseFloat
+
+        var stringANumerico=parseFloat("123.1a");
+
+        console.log(StringANumro);
+
+            cambia el string por numero e ignora a la letra 'a'
+
+
+
 --------------------------------------------------clase 15----------------------------------------------
 
 OPERADORES CONDICIONAES
