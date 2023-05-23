@@ -185,6 +185,8 @@ ParseFloat
 
 --------------------------------------------------clase 15----------------------------------------------
 
+comienzo a ver la clase 15/JS2
+
 OPERADORES CONDICIONAES
 
     ==
