@@ -1,0 +1,2 @@
+-------------------------------------------clase 22-----------------------------------------
+comenzamos con base de datos descargando MySQL
