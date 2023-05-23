@@ -185,7 +185,7 @@ ParseFloat
 
 --------------------------------------------------clase 15----------------------------------------------
 
-comienzo a ver la clase 15/JS2
+ la clase 15/JS2
 
 OPERADORES CONDICIONAES
 
@@ -206,15 +206,32 @@ es mas simple no se puede varias lineas
 
 --------------------------------------------------clase 16----------------------------------------------
 
+CLASE JS2 02/05 en Youtube
+
+
 SWITCH
 
 let aux= true;
+
 switch(aux){
     case true:
-        console.log("hola");
-        brack;
+        console.log("la variable contiene un true");
+        breack;
+
+    case false:
+        console.log("la variale contiene un 2");
+        breack;
+    case 1:
+        console.log("la varialb econtiene un 3");
+        breack;
+    case 4:
+        console.log("la varialb econtiene un 4");
+        breack;
+    case hola:
+        console.log("la varialb econtiene un 5");
+        breack;    
     default:
-            console.log("askad");
+            console.log("La variable contiene un valor no valido.");
             brack;
 }
 
