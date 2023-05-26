@@ -237,6 +237,10 @@ switch(aux){
 
 //CICLOS
 
+
+
+//WHILE
+
 let contador=0;
 while(contador <=20){
         console.log(contador);
@@ -263,9 +267,16 @@ for(let i=0;i>=0;i++){
 
 
 let palabra="hola este es un texto largo, no soy un redactor...";
-console.log(palabra.toUpperCase()); poner en mayuscula todo
-console.log(palabra.replace("teto", "texto aburrido y largo")); reemplazar texto de un string
 
+console.log(palabra.indexOf("soy)); //buscar un palabra en un texto largo
+
+console.log(palabra.toUpperCase()); //poner en mayuscula todo
+
+console.log(palabra.replace("teto", "texto aburrido y largo")); //reemplazar texto de un string, la primera es la que busca y las segunda por la que reemplaza
+
+console.log(palabra.charCodeAt(0)); //obtiene el codigo en decimal 
+
+console.log(palabra.charAt(0)); //muestra el caracter directamente
 
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
