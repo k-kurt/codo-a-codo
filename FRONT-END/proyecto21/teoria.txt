@@ -306,6 +306,19 @@ ARRAY
 
     //ejercicio para mi, modificar una posicion para ver dimension
 
+
+
+//RECORRER UN ARRAY
+
+    const meses=new Array("enero", "Febrero", "marzo", "Abril", "Mayo");
+
+    for(let i=0; i<meses.length; i++){
+        console.log(meses[i]);
+    }
+
+
+
+
 AGREGAR ELEMENTO AL ARRAY
 
     numero[5]=4;
@@ -317,17 +330,19 @@ AGREGAR ELEMENTO AL ARRAY
     numeros.unshift(-30,-20,-10);       agrega al principio
 
 
-QUITAR DEL ARRAY
+ELIMINAR ELEMENTOS DE UN ARRAY
 
-    numeros.ppop();     elmina el ultimo
+    numeros.pop();     elmina el ultimo
 
     numero.shift();     elimina el primero
 
     numeros.splice(2,1);        puedo eliminar tantos elementos que quisiera de donde quisiera
-                                subindice que inicia, cantidad de elementos que elimina
+                                subindice que inicia, cantidad de elementos que elimina, desde el indice 2 eliminar 
+                                1 elemento, y si pongo mas alto el numero borra hacia la derecha
 
 
 REST OPERATOR O SPREAD OPERATOR
+    //Nos permite anexar o hacer referencia un determinado elemento de un array
 
     const meses =["septiembre", "octubre"];
 
@@ -335,6 +350,8 @@ REST OPERATOR O SPREAD OPERATOR
 
 
 BUCLE FOR
+
+//recorrer un array
 
     for(let i=0;i<meses.length;i++){
         console.log(meses[i]);
@@ -365,6 +382,16 @@ EXPRESION DE UNA FUNCION
     guardando una funcion en una variable y estas se guardan secuencialmente 
 
 
+
+IIFE se invocan a si mismas, no son recomendables para reutilizar
+
+(function (){
+    console.log("Esto es una funcion");
+})(); 
+
+//son como recursivas
+
+
 PARAMETROS Y ARGUMENTOS
 
     function sumar3(n1,n2){
@@ -375,7 +402,7 @@ PARAMETROS Y ARGUMENTOS
 
 
 
-
+JS3 TERMINADO
 --------------------------------------------------clase 18----------------------------------------------
 
     USAR RETURN EN LA FUNCION       para poder guardar en una variable donde fue emvocada la funcion
