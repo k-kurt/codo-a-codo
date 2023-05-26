@@ -287,6 +287,10 @@ donde dice metodo instance en la derecha
 
 --------------------------------------------------clase 17----------------------------------------------
 
+JS3 04/05 
+
+
+
 ARRAY
     
     const numero=[];        cualquier tipo de array, de datos
