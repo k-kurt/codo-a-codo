@@ -491,15 +491,195 @@ console.log(resultado);
 
 CALLBACKS--------------------------------------
 
+//llama a ua fucion detro de otra funcion 
+
+
+
 function mensaje(vooleano){
     console.log(voolano);
 }
 
 function llamadaFunc(number,pepe){
-    if(number=01){
+    if(number==1){
         pepe(true);
+    }else{
+        pepe(false);
     }
 }
+
+llamadaFunc(1,mensaje);
+
+//elegimos el nombre del argumento que nosotros queremos, en este caso pepe 
+
+---------------------
+
+function llamadaFunc(number,pepe){
+    if(number==1){
+        pepe(true);
+    }else{
+        pepe(false);
+    }
+}
+
+
+llamadaFunc(1,analiza);
+
+
+
+function analiza(booleano){
+    if(booleano==true){
+        console.log("soy el 1");
+
+    }else{
+        console.log("soy distinto de 1");
+    }
+}
+
+
+//la llamda de la funcion llmadaFunc con analiza, pasa un 1, en la funciona llamdaFunc si es 1 a pepe osea analiza se queda en true
+//lo que repliza en analiza en la funcion en el argumento booleano que es pasado como true. 
+
+
+-------Closures-----------------------------
+
+
+        // Nos permite definir una funcion dentro de otra y nos permite llamdarla dentro de esa funcion 
+
+
+function iniciar(){
+    var nombre="Codo a Codo";   //la variable nombre es una variable local creada por iniciar
+    function mostrarNombre(){   //la funcion mostrarNombre es una funcion interna, una clausura.
+        alert(nombre);          //usa una variable declarada en la funcion externa.
+    }
+        mostrarNombre();
+   }
+
+
+    //mostrarnombre();
+
+    iniciar();
+
+
+
+
+
+-------Arrow Functions-----------------------------
+
+    //se utiliza en ciertas funciones de JavaScript donde se solicita este tipo de funciones
+
+
+//funcion tradicional
+fuction fnc(a){
+    return a+100;
+
+}
+
+//desglose de la funcion flecha
+
+// 1.Eelimina la palabra "function" y el nombre, luego coloca la flecah entre el argumento y la llave de apertura.
+(a) => {
+    return a+100;
+}
+
+// 2. quita las llaves del cuerpo y la palabgra "return" - el return esta implicito.
+    (a) => a + 100;
+
+// 3. Suprime los parantesis de los argumentos.
+    a => a + 100;
+
+
+// Funcion tradicional
+    function fnc2(a, b){
+    return a + b + 100;
+}
+
+
+// Funcion flecha
+    (a,b) => a + b + 100;
+
+
+// Funcion tradicional (sin argumentos)
+
+    let a=4;
+    let b=2;
+    function fnc3(){
+        return a+b+100;
+    }
+
+// Funcion flecha (sin argumentos)
+let a1=4;
+let a2=2;
+()=>a1+b2+100;
+
+//En caso de que tengamos mas d euna linea dentro de la funcion
+
+// Funcion tradicional
+
+funcion fnc4(a,b){
+    let chuck=42;
+    return a+b+chuck;
+}
+
+// Funcion flecha
+(a,b)=>{
+    let chuck=42;
+    return a+b+chuck; 
+}
+
+//el return se vuelve a poiner por que cuando hay unbloque de ejecucion el return no es implicito
+
+
+
+-------callback + arrow fuction------------
+
+
+const array1=['a','b','c'];
+
+array1.forEach(element=>console.log(element));  //el forEach toma cada elemento del array y lo guarda en la var element y lo muestra 
+
+
+// callback puro 
+
+const array1=['a','b','c'];
+
+let element = e=>console.log(e);
+
+array1.forEach(element);
+
+
+// El forEach no retorna un valor en cambio el map si, por que crea un array nuevo
+
+
+
+const array=[1,4,9,16];
+
+//pass a function to mapconst doble = array.map(element=>element*2);
+
+console.log(doble);
+
+
+//ARRAY.FILTER----------------
+
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+
+
+
+//Array.every()---------------
+
+    //el resultado va a ser true o false dependiendo si todos los elementos cumplen con la condicion
+
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: true
+
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
