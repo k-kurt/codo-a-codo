@@ -780,6 +780,20 @@ console.log(heading);
 JS5 TERMIANDO
 
 --------------------------------------------------clase 20----------------------------------------------
+JS6 16/5
+
+------querySelectorAll---------------------------------------
+//muchos elementos en una sola variable, va a ser un vertor o array que contenegan elementos u objetos de html
+
+const enlaces=document.querySelectorAll('.navegacion a');
+
+//obtener objetos separados de ese array
+enlaces.forEach(link=>console.log(link));
+
+console.log(enlaces);
+
+
+
 
 https://bem-cheat-sheet.9elements.com/
 
