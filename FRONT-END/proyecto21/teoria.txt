@@ -688,11 +688,96 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 
 --------------------------------------------------clase 19----------------------------------------------
+CLASE JS4 11/5
+
+
+----OBJETOS EN JS--------------------------
+
+const persona={
+    nombre:"maria",
+    apellido:"perez",
+    dni:3546443,
+    esmayor: true,
+
+
+    caminar: function(){
+        console.log("la persona "+this.nombre+" esta caminando...");        //la palabra this hace referencia directamente a la variable que esta dentro de la estructura
+    }
+}
+
+//persona.nombre="carlos";
+
+//persona.caminar();
+
+conosle.log(persona.nombre+" "+persona.apellido);
+
+
+---OBJETO LITERAL SIN NOMBRE EN UN ARRAY--------------
+
+const arreglo=[persona,{nombre:"maria", apellido:"perez", dni:3546443, esmayor: true, caminar: function(){}}];
+
+console.table(arreglo);
+
+//se puede tener un objeto sin nombre en un array por que se inditifica con los subindices los argumentos
+
+-----
+//arreglo es el de arriba que esta modificando aca abajo
+
+
+arreglo.forEach(function(p){
+
+        if(p.nombre=="miriam")
+        p.esMayor=false;
+    });
+
+
+    //guarda en un array nuevo los que cumplen con la condicion
+
+    const arregloNuevo + arreglo.filter(p=>p.apellido.charAt(0)=='G' || p.apellido.charAt(0)=='g');
+
+
+        persona.nuevo="algoNuevo";          //la propiedad nuevo es algo magico en JS, agrega el argumento al onjeto sin declararlo
+
+
+
+
+//agregar al nuevo a todo los argumentos del arreglo
+
+    arreglo.forEach(p=>p.nuevo="same");
+
+
+    console.table(areglo);
 
 
 
 
 
+------querySelector---------------------------------------
+
+//para seleccionar elementos del documento html
+
+const heading=document.querySelector('.header__texto h2');      retorna 0 o 1 elemento, la primera coincidencia 
+
+const heading=document.querySelector('#heading');  //la fomra recomendable
+
+
+console.log(heading);
+
+//agregar texto nuevo
+
+    heading.textContent='nuevo Heading';
+
+//agregar una nueva clase
+
+    heading.classList.add('nueva-clase');
+
+console.log(heading);
+
+
+
+
+
+JS5 TERMIANDO
 
 --------------------------------------------------clase 20----------------------------------------------
 
