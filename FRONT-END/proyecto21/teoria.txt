@@ -793,6 +793,89 @@ enlaces.forEach(link=>console.log(link));
 console.log(enlaces);
 
 
+enlace[0].textContent='pagina de Google';
+//modificar link
+enlace[0]href='http://google.com';
+
+
+
+
+
+----getElementById------------------------------------------
+//trae elementos con el ID, uno solo
+
+const heading2=document.getElementById('heading');
+
+console.log(heading2);
+
+
+
+
+
+
+----Generar un nuevo link------------------------------------------
+    
+    
+    //crear un nuevo elemento y mandarlo al html
+
+
+const nuevoLink=document.createElement('a');        //entre parentesis va el elemento al que hacemos referencia
+                                                    //a para link, h2 para titutloH2, p para parrafo    
+
+//href
+nuevoLink.href='www.google.com';
+//texto
+nuevolink.textContent='Link a google';
+//clase
+nuevolink.classList.add('navegacion__enlace');
+
+
+
+const nuevoLink2=document.createElement('A');
+
+//href
+nuevoLink2.href='www.google.com';
+//texto
+nuevoLink2.textContecnt='link de google2';
+//clase
+nuevoLink2.classList.add('navegacion__enlace');
+
+//agregarlo al documento
+const navegacion=document.querySelectorAll('.vaegacion');
+
+navegacion[0].appendChild(nuevoLink);
+
+navegacion[1].appendchild(nuevoLink2);
+
+//console.log(navegacion);
+
+
+
+
+----EVENTOS-----------------------------------------
+    
+
+console.log(1);
+
+windows.addEventListener('load',function(){//load espera a que js y los archivos que dependen del html esten listos
+    console.log("estoy en el evento");
+});
+
+
+document.addEventListener('DOMContentLoaded',function(){//solo espera que se descargue el html
+    console.log(4);
+});
+
+
+windows.onscroll=function(){
+    console.log("Scrolling...");
+
+}
+
+
+console.log(5);
+
+
 
 
 https://bem-cheat-sheet.9elements.com/
