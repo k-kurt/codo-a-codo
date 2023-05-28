@@ -877,6 +877,87 @@ console.log(5);
 
 
 
+----seleccionar elementos y asociarles un evento-----------------------------------------
+
+
+const btnEnviar=document.querySelector('.boton--primario');
+
+btnenviar.addEventListener('click', function(evento){
+    console.log(evento);
+    //evento.preventDefault();      //permite interrunpir la recarga de la pagina cuando se envia el formulario
+
+    //VALIDAR FORMULARIO
+
+    console.log("enviando formulario..");
+    //CTRL+K+C      CTRL+K+U
+});
+
+
+
+----evento de Submit-----------------------------------------
+
+
+const formulario=document.querySelector('.formulario');
+
+formulario.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    //aca se valida formulario
+
+    //luego se envian los datos
+
+    console.log("Enviando Formulario 2...");
+});
+
+
+
+
+
+----Eventos de los inputs y text area-----------------------------------------
+
+
+//CREO UN OBJETO
+
+const datos={
+    nombre: '',
+    email: '',
+    mensaje: ''
+}
+
+//obtener elementos de html necesarios
+
+const nombre=document.querySelector('#nombre');
+const email=document.querySelector('#email');
+const mensaje=document.querySelector('#mensaje');
+const formulario=document.querySelector('#formulario');
+const contador=document.createElement('P');
+
+formulario.appendChild(contador); 
+
+
+//--------------Esto solo para entender el evento de input---------------------------------------------------
+
+nombre.addEventListener('input', function(e){       //probar 'change'
+    console.log(e.target.value);
+});
+
+emial.addEventListener('input', function(e){
+    console.log(e.target.value);
+});
+
+mensaje.addEventListener('input', function(e){
+    console.log(e.target.value);
+});
+
+//-------GUARDO VALORES EN ATRIBUTOS DEL OBJETO DATOS----------
+
+//esto si hacemos
+
+
+
+
+
+
 
 https://bem-cheat-sheet.9elements.com/
 
