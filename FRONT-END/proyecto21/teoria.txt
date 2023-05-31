@@ -932,6 +932,11 @@ const mensaje=document.querySelector('#mensaje');
 const formulario=document.querySelector('#formulario');
 const contador=document.createElement('P');
 
+
+email.disable=true;
+mensaje.disable=true;
+
+
 formulario.appendChild(contador); 
 
 
@@ -975,16 +980,41 @@ VIDEO JS7 18/5 comenzando
 nombre.addEventListener('input', function(event){
     datos.nombre=event.target.value;
     console.log(datos.nombre);
-});
-email.addEventListener('input', function(event){
-    datos.email=event.target.value;
+
+
+    //destructuring
+    const{nombre}=datos;
+
+  
+    
+    //agregando la validacion de nombre sin numeros
+
+      for(i=0;i<nombre.length;i++){
+        if(nombre.charAt(i)>47 && nombre.charCodeAt(i)<58){
+            mostrarMensaje("El nombre no puede contener numeros",true);
+            email.disabled=true;    
+            return;
+        }
+    }
+
+    emial.disabled=false;       //esta  propiedad permite anular el input, no se puede escribir en el hasat que este bien
+                                //en este caso el nombre
+
 });
 
-mensahe.addEventListener('input', function(pepe){
+
+email.addEventListener('input', function(event){
+    datos.email=event.target.value;
+     mensaje.disabled=false;
+});
+
+mensaje.addEventListener('input', function(pepe){
     datos.mensaje=pepe.target.value; //guarda en el momento todo lo que va escribiendo
 
     //destructuring             //obtener de alguna manera en una variable algun atributo del objeto
     const {mensaje} =datos;        // no es el mismo mensaje del objeto datos pero proviene de ahi, ahora mensaje es una variable
+
+
 
     if(mensaje.length>=20){
         mostrarmensaje("El mnejsae es demasiado largo.",true);
@@ -997,9 +1027,106 @@ mensahe.addEventListener('input', function(pepe){
 });
 
 
+//------------------------------------------------------------------------
+//validar envio de formulario
+
+formulario.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    //aca se valida el formulario
+    const{nombre, email, mensaje} = datos; //destructuring
+
+    if(nombre==='' || email==='' || mensaje===''){
+        mostrarMensaje("Alguno de los campos no se completo.", true);
+        return;     //usa el return para que se termine la ejecucion y no continue por fuera del if
+    }
+
+    //Alerta de succes formulario
+    mostrarMensaje("Los datos se ingresaron correctamente.");
+});
+
+
+//---------------------------------que se comuniquen entre si las funciones
+min 35:03 esta el formulario en html
+
+formulario.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    //aca se valida el formulario
+    const{nombre, email, mensaje} = datos; //destructuring
+
+     if(mensaje.length>=20){
+        mostrarmensaje("El mnejsae es demasiado largo.",true);
+        return;
+    }
+
+    if(nombre==='' || email==='' || mensaje===''){
+        mostrarMensaje("Alguno de los campos no se completo.", true);
+        return; 
+
+    }    
+
+    //Alerta de succes formulario
+    mostrarMensaje("Los datos se ingresaron correctamente.");
+});
 
 
 
+
+
+    //funtion leerTexto(e){
+    //datos[e.target.id]=e.taret.value;
+    //console.log(datos)
+//}
+
+
+
+function mostrarMensaje(mensaje, error){
+    const respuesta=document.createElement('P);
+    respuesta.textContent=mensaje;
+
+    if(error){
+        respuesta.classList.add('error');
+    }else{
+        respuesta.classList.add('correcto');
+    }
+
+    formulario.appendChild(respuesta);
+    setTimeout(()=>{
+        respuesta.remove();
+    },5000);
+    
+}
+
+
+
+function mostrarContador(contador, elemento){
+    elemento.textContent = contador;
+}
+
+
+
+/*---------------------------
+
+function mostrarAlerta(mensaje, error=null){
+    const alerta=document.createLement('P');
+    alerta.textContent=mensaje;
+
+    if(error){
+        alerta.classList.add('error');
+    }else{
+        alerta.classList.add('correcto');
+    }
+    formulario.appenChild(alerta);
+
+    setTimeOut(()=>{
+        alerta.remove():
+    },5000);
+
+}
+
+
+-------------------------------*/
 
 
 
