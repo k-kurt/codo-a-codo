@@ -955,7 +955,7 @@ mensaje.addEventListener('input', function(e){
 
 
 
-
+CONTIUAMOS LO MISMO EN LA SIGUIENTE CLASE
 
 
 
@@ -964,5 +964,43 @@ https://bem-cheat-sheet.9elements.com/
 
 
 --------------------------------------------------clase 21----------------------------------------------
+VIDEO JS7 18/5 comenzando 
+
+
+
+//-------GUARDO VALORES EN ATRIBUTOS DEL OBJETO DATOS----------
+
+//esto si hacemos
+
+nombre.addEventListener('input', function(event){
+    datos.nombre=event.target.value;
+    console.log(datos.nombre);
+});
+email.addEventListener('input', function(event){
+    datos.email=event.target.value;
+});
+
+mensahe.addEventListener('input', function(pepe){
+    datos.mensaje=pepe.target.value; //guarda en el momento todo lo que va escribiendo
+
+    //destructuring             //obtener de alguna manera en una variable algun atributo del objeto
+    const {mensaje} =datos;        // no es el mismo mensaje del objeto datos pero proviene de ahi, ahora mensaje es una variable
+
+    if(mensaje.length>=20){
+        mostrarmensaje("El mnejsae es demasiado largo.",true);
+        return;
+    }
+
+
+    mostrarContador(mensaje.length, contador);
+
+});
+
+
+
+
+
+
+
 
 https://www.w3schools.com/jsref/dom_obj_event.asp
