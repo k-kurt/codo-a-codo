@@ -1,2 +1,17 @@
 -------------------------------------------clase 22-----------------------------------------
 comenzamos con base de datos descargando MySQL
+
+
+-------------------------------------------clase 23 6/1/23-----------------------------------------
+varchar 
+text
+int 
+float
+tipo fecha datetime
+
+primary key
+    pueden ser compuesto, a partir de 2 tablas
+
+foreing key
+    es una columna o conjunto de valores de una tabla que se relacionan con la primary key de otra tabla
+
