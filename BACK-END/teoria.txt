@@ -2,7 +2,8 @@
 comenzamos con base de datos descargando MySQL
 
 
--------------------------------------------clase 23 6/1/23-----------------------------------------
+-------------------------------------------clase 23 1/6/23-----------------------------------------
+
 varchar 
 text
 int 
@@ -10,8 +11,135 @@ float
 tipo fecha datetime
 
 primary key
-    pueden ser compuesto, a partir de 2 tablas
+    una primary key es una columna o un conjunto de columna en una tabla cuyos valores identifica de forma unica una fila
+    es decir, es una columna dentro de una tabla que identifica a un unico registro, cada uno de sus valores
+    pueden ser numeros, alfanumericos y pueden ser compuestos, podemos componerlos a apartir de 2 tablas, de 2 campos
 
 foreing key
     es una columna o conjunto de valores de una tabla que se relacionan con la primary key de otra tabla
+    Es una columna o un conjunto de columna en una tabla cuyo valores corresponden a los valores de la clave primaria de la otra tabla
 
+
+DER
+
+    Entidades
+        Departamento
+        Empleado
+    RELACION 
+        Tiene
+    ATRIBUTOS/TABLAS
+        Empleado
+            legajo
+            nombre
+            apellido
+        Departamento
+            id_depto
+            nombre
+    CARDINALIDAD
+        muchos(n) Empleado tiene un Departamento(1)
+        un Departamento(1) tiene muchos Empleado(n)
+        
+
+
+    no es necesario que las entidades tenga relacion una con otra
+
+    En el otro diagrama
+
+    --||-------------------------||--   es uno a uno
+
+    /|\---------------------------/|\   es mucho a mucho
+
+
+    SENTENCIAS---------------
+
+    SELECT 
+        siempre nos permite seleccionar alguno o todos los elementos de una determinada tabla,
+        siempre va acompaniado del FROM
+        si uso * significa que quiero ver todas las columnas
+
+
+        SELECT * FROM world.city ;
+        SELECT Name, CountryCode, District FROM world.city;
+
+
+    WHERE
+        una condicional que significa donde
+
+
+
+        select * from city where Population > 2000000;
+
+        select * from city where Population >=2000000 and CountryCode ="ARG";
+
+
+    NOT
+        negar
+
+
+         SELECT * from city WHERE Population >=2000000 AND NOT CountryCode ="ARG";    
+
+
+    ORDER BY 
+
+        permite ordenar por un determinado campos
+
+        SELECT * from city WHERE Population >=2000000 AND  CountryCode ="ARG" ORDER BY name DESC; 
+
+
+        SELECT * from city WHERE Population >=2000000 AND  CountryCode ="ARG" ORDER BY name AND Population;
+    
+
+    LIMIT
+
+        limitar las coincidencias
+
+
+        SELECT * from city WHERE Population >=2000000 ORDER BY name DESC LIMIT 10; 
+
+
+
+
+    LIKE
+
+        buscar coincidencia en varchar dependiendo condicion
+
+        
+        buscar todo lo que termina con "a"
+        SELECT * FROM city
+        WHERE Name LINKE "%a"
+        ORDER BY Name AND Population;
+
+        buscar todo lo que empieza con "a"
+        SELECT * FROM city
+        WHERE Name LINKE "a%"
+        ORDER BY Name AND Population;
+
+
+        buscar todo lo que tenga "or" en medio
+        SELECT * FROM city
+        WHERE Name LINKE "%or%"
+        ORDER BY Name AND Population;
+
+
+        BETWEEN
+
+            buscar entre 2 rangos
+
+        SELECT * FROM city
+        WHERE Population BETWEEN 1000000 AND 2000000
+        ORDER BY Name AND Population;
+
+
+        FUNCIONES DE AGREGACION
+
+
+          SELECT max(Population) FROM city;
+
+
+        SUBCONSULTAS
+
+        SELECT name, population  FROM city WHERE Population=(SELECT max(Population) FROM city);      
+
+
+
+-------------------------------------------clase 24 8/6/23-----------------------------------------
