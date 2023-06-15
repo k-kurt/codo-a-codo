@@ -143,3 +143,49 @@ DER
 
 
 -------------------------------------------clase 24 8/6/23-----------------------------------------
+
+INSERT
+    insertamos datos en la tabla usuarios
+
+    
+    SELECT * FROM codoacodo_com_23046.usuarios;
+    
+    INSERT INTO `codoacodo_com_23046`.`usuarios` (`nombre`, `apellido`, `edad`, `tiene_hijos`, `fecha_nac`) 
+    VALUES ('kevin', 'sboboda', '26', '1', '1997-04-09'),('kurt', 'sboboda', '26', '1', '1997-04-09'),
+    ('maria', 'sboboda', '26', '1', '1997-04-09'),('gisel', 'sboboda', '26', '1', '1997-04-09');
+
+    SI TIRA UN WARNING, AGREGO LOS DATOS IGUAL A LA BBDD PERO LO SETEA AL FORMATO DECLARADO
+
+
+UPDATE
+
+    Nos permite modificar una o varios registros segun id
+
+    UPDATE `codoacodo_com_23046`.`usuarios` SET `edad` = '20', `fecha_nac` = '2004-04-09' WHERE (`id` = '2');
+    UPDATE `codoacodo_com_23046`.`usuarios` SET `nombre` = 'lucas', `apellido` = 'roperto', `edad` = '36', `tiene_hijos` = '5', `fecha_nac` = '1987-04-09' WHERE (`id` = '3');
+    UPDATE `codoacodo_com_23046`.`usuarios` SET `nombre` = 'abel', `apellido` = 'lopez', `edad` = '23', `tiene_hijos` = '2', `fecha_nac` = '2000-04-09' WHERE (`id` = '4');
+    UPDATE `codoacodo_com_23046`.`usuarios` SET `apellido` = 'asas', `edad` = '2', `fecha_nac` = '2020-04-09' WHERE (`id` = '5');
+
+
+    EL UPDATE SE TIENE CAA UNO POR REGISTRO, NO SE PUEDE MULTIPLE
+
+
+DELETE
+
+    eliminar una fila
+
+    DELETE FROM `codoacodo_com_23046`.`usuarios` WHERE (`id` = '2');
+
+
+----------------------JAVA----------------------------------------
+
+
+
+
+-------------------------------------------clase 25 13/6/23-----------------------------------------
+
+ENCAPSULAMIENTO
+
+    siempre hay que hacer buena practica y siempre hacer los getters y setters
+
+    sout
