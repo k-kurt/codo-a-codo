@@ -264,6 +264,16 @@ min 51:22
 
 -------------------------------------------clase 27 22/6/23-----------------------------------------
 
+BORRAR PERRITO DE LA COLECCION
+
+el metodo remove, podemos pasar un objeto pero tendriamos que buscarlo y pasarlo, entonces 
+en este caso pasamos el indice 
+
+
+
+
+min 21:19
+
 
 
 -------------------------------------------clase 28 27/6/23-----------------------------------------
