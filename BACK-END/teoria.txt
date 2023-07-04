@@ -185,7 +185,132 @@ DELETE
 -------------------------------------------clase 25 13/6/23-----------------------------------------
 
 ENCAPSULAMIENTO
+    
+    se trata de responsabilidad propia de la clase mediante metodos, por eso el atributo es
+    privado. y quine puede acceder a ciertos elementos
+    
 
-    siempre hay que hacer buena practica y siempre hacer los getters y setters
+
+siempre hay que hacer buena practica y siempre hacer los getters y setters
+
+
 
     sout
+
+
+-------------------------------------------clase 26 15/6/23-----------------------------------------
+
+
+TO STRING
+
+
+    @Override
+    public String toString() {
+        return "Perro{" + "nombre=" + nombre + ", tieneVacunas=" + tieneVacunas + ", colorPelo=" + colorPelo + '}';
+    }
+
+
+        public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Perro p=new Perro("sofi", true, "blanco");
+        System.out.println(p.toString());
+        
+    }
+
+
+COLECCIONES
+
+        ArrayList
+        
+        
+        ArrayList<Perro> arrayDePerros=new ArrayList();
+        
+        dentro de los picos va ir el tipo de dato de los objetos que voy a guardar
+        Si voy a guardar perros entonces pongo Perro, chihuahua entonces chihuahua
+        Las colecciones guardas objectos, no pueden guardar primitivos
+
+       --------------OTRO TIPO DE COLECCION
+
+       HashMap
+
+
+       todo lo que provenga de Hash, la particularidad del HashMap cada elemento contiene un par k(id) value 
+       de objetos, cada elemento esta computo por un par de objetos
+
+
+       HashMap <Integer, String> setDeNumeros=new HashMap();
+        
+       
+       entre los picos decimos de que tipos de objetos y va integer por que int es de tipo primitivo
+       en cambio integer es una clase
+       el metodo get en este caso en el for hace referencia al value del k(id) de la coleccion
+       en vez de hacer referencia al subindice
+
+Los HashMap se suelen usar para cosas bien especificas, vamos a usar mas arrayList
+     
+-------------------------------------------------
+        Automatizar creacion de objectos por consola
+
+          utilizamos el obecto Scanner para leer cosas de la consola
+
+          Scanner sc=new Scanner(System.in);
+
+          
+
+
+min 51:22
+
+
+-------------------------------------------clase 27 22/6/23-----------------------------------------
+
+
+
+-------------------------------------------clase 28 27/6/23-----------------------------------------
+
+
+
+
+
+
+-------------------------------------------clase 29 29/6/23-----------------------------------------
+
+ARQUITECTURA MVC
+    modelo vista controlador, al recibir un request, el mvc va a estar comunicandose con la capa DAO
+    al presionar el boton ENVIAR, hace una peticion al servidor, en el Server esta el MVc y la capa DAO
+    el servidor responde con datos, la respuesta del servidor al cliente se llama JSP
+
+cliente                                 SERVER
+      ---> request--->              MVC        DAO            
+                           <---JSP<---  
+                                    
+
+
+descargar el 5.0
+https://javaee.github.io/glassfish/download
+
+
+
+en el POM
+en dependecis
+
+<dependency>
+           <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.29</version>
+        </dependency>
+
+
+<dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+
+la dirrecion a la base de datos
+jdbc:mysql://localhost:3306/libros?useSSL=false&useTimeZone=true&serverTimeZone=UTC&allowPublicKeyRetrieval=true
+
+metodo de cerrar conexion
+public static void close(ResultSet rs) throws SQLException{
+        rs.close();
+    }
