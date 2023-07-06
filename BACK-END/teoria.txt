@@ -264,15 +264,28 @@ min 51:22
 
 -------------------------------------------clase 27 22/6/23-----------------------------------------
 
-BORRAR PERRITO DE LA COLECCION
+    BORRAR PERRITO DE LA COLECCION
 
 el metodo remove, podemos pasar un objeto pero tendriamos que buscarlo y pasarlo, entonces 
 en este caso pasamos el indice 
 
+    POLIMORFISMO
+
+Nos permite cambiarke la forma a un objeto. una clase padre no puede ver los metodos de sus hijos
+
+    List <Perro> arraDePerros=new ArrayList();
+
+creamos un list pero lo tranformamos en un arrayList para poder usar sus funciones
+o en cualquiera que sea derivado del list
 
 
+    CONECTAR UNA BASE DE DATOS EN JAVA
 
-min 21:19
+Crear proyecto "java witch Maven" 
+    Nos permite gestionar las clases, las dependencias, las librerias externas a la API de Java
+     en un archivo de configuracion
+
+min 51:48
 
 
 
