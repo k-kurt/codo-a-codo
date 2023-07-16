@@ -259,7 +259,6 @@ Los HashMap se suelen usar para cosas bien especificas, vamos a usar mas arrayLi
           
 
 
-min 51:22
 
 
 -------------------------------------------clase 27 22/6/23-----------------------------------------
@@ -283,17 +282,92 @@ o en cualquiera que sea derivado del list
 
 Crear proyecto "java witch Maven" 
     Nos permite gestionar las clases, las dependencias, las librerias externas a la API de Java
-     en un archivo de configuracion
+    en un archivo de configuracion.
+    En el archivo pom.xml en parte de Proyect Files, se agregan las librerias)depedencias)
+    Se descargan automaticamente todo lo necesario
 
-min 51:48
+
+    Lo hacemos de la siguiente manera:
+        
+
+        <dependencies>
+            <dependency>
+                x dependencia 
+            <\dependency>
+        <\dependencies>
+
+
+
+    Dependencia de MySql
+
+    <dependency>
+           <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.29</version>
+    </dependency>
+        
+
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.31</version>
+        </dependency>
+    </dependencies>
+
+
+
+TERMINADO
 
 
 
 -------------------------------------------clase 28 27/6/23-----------------------------------------
+            
+
+            PATRON DAO
+
+nos ayuda a organizar todo, nos abstrae todo lo referente  a SQL y todo lo referente a java 
+El patron nos indica que debemos divir en paquetes el proyecto.
+
+    -Creamos el paquete modelo
+ donde deberiamos representar las entidades o las tablas de nuestra base de datos, donde creamos
+las variables en una clase que represente a la tabla, la variable con nombre de las columnas de la tabla
+
+    -Paquete de data
+Puede estar divido o no, depende de como lo querramos hacer. Donde tenemos la class Conexion donde vamos a tener una conexion
+para hacer las consultas y la clase UserDao en este caso por que tenemos la class users en el paquete modelo, donde usersDao 
+hace la consulta a la base de datos y la class users va a brindar objetos donde yo puedo guardar los registros de mi base 
+de datos 
+    
+    -
 
 
 
+            METODO INSERTAR
+//le decimos que reciba un usuario, que tiene cargado los elementos a modificar, que esta en el parametro 
+SQL_INSERT
+INSERT INTO usuarios(usuarios(nombre, apellido, edad, tiene_hijos, baja)
 
+Lo hago mediante los setters del PreparedStatement, que posee getteers y setters, diciendole en que orden esta, siempre
+arrancando de 1
+
+PreparedStatement stmt = null;
+
+stmt.setString(1, user.getNombre());
+stmt.setString(2, user.getApellido());
+stmt.setBoolean(3,false);
+
+A diferencia del Select que se egecuta a travez del 
+rs=stmt.executeQuery();
+en el Actualizar se utiliza
+ registros = stmt.executeUpdate();
+
+                        COMO REGLA GENERAL
+para todo lo que no sea un SELECT se utiliza EXECUTEUPDATE por que el EXECUTEQUERY retorna un ResultSet 
+entonces si voy a ejecutar un SQL_UPDATE y un SQL_DELETE voy a usar executeUpdate; para consulta un executeQuery
+
+
+TERMINADO
 
 
 -------------------------------------------clase 29 29/6/23-----------------------------------------
@@ -301,12 +375,45 @@ min 51:48
 ARQUITECTURA MVC
     modelo vista controlador, al recibir un request, el mvc va a estar comunicandose con la capa DAO
     al presionar el boton ENVIAR, hace una peticion al servidor, en el Server esta el MVc y la capa DAO
-    el servidor responde con datos, la respuesta del servidor al cliente se llama JSP
+    el servidor responde con datos, la respuesta del servidor al cliente se llama JSP, es una forma de que java incorpore codigo 
+    de jaba en un archivo html
+    
 
-cliente                                 SERVER
-      ---> request--->              MVC        DAO            
-                           <---JSP<---  
-                                    
+cliente                                     SERVER
+      ---> request--->                  MVC            DAO            
+                           <---JSP<---      <--datos--    
+                                 
+
+el MVC esta constituido por:
+
+    VISTA 
+    
+ la vista es el cliente, cuand el modelo le da la respuesta al controlador, el controlador ya tiene todo entonces genera una jsp
+al cliente, la vista. 
+
+    CONTROLADOR
+
+el controlador siempre se va  encargar de responder al cliente, se encarga de las responsive y las request
+le v a pedir al modelo 
+
+    MODELO
+
+ genera la informacion que necesita el controlador, el modelo realiza la accion de cumplir la request
+
+
+La vista(el cliente) hace una request al controlador, el controaldor le da un mensaje al modelo, que realice tal accion, entonces
+el modelo le da unas respuesta y el controlador devuelve a la vista un jsp
+
+
+
+
+            Creacion del proyecto
+Creamos un proyecto sleccionando Java with maven--> Web Application
+
+
+
+
+
 
 
 descargar el 5.0
@@ -337,3 +444,47 @@ metodo de cerrar conexion
 public static void close(ResultSet rs) throws SQLException{
         rs.close();
     }
+
+
+
+
+TERMINADO
+
+-------------------------------------------clase ** 4/7/23-----------------------------------------
+
+
+
+
+
+
+
+-------------------------------------------clase ** 6/7/23-----------------------------------------
+
+
+href="${pageContext.request.contextPath}/servletControlador?accion=editar&idLibro=${libro.idlibros}" class="btn btn-secondary"
+
+
+
+-------------------------------------------clase ** 11/7/23-----------------------------------------
+
+<dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${jakartaee}</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+
+try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace(System.out);
+        }
+
+
+
+
+
+-------------------------------------------clase ** 13/7/23-----------------------------------------
+
